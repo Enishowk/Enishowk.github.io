@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://enishowk.github.io/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/a-brief-history-of-typography</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/dispo-un-iphone-x-en-as</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/ghost-blog-debian-9-sqlite</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/week-rewind-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/week-rewind-2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/mocker-son-api-rest-avec-json-server</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/creer-un-bot-sur-discord</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/generer-des-uuid-avec-sequelize</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/posts/nas-homemade</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/pages/uses/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/apache</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/apple</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/bot</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/debian</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/dev</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/dev/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/discord</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/ghost</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/hardware</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/nas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/node</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/ssl</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/sequelize</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/sqlite</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/tag/uuid</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/category/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/category/dev</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/category/dev/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/category/hardware</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://enishowk.github.io/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>

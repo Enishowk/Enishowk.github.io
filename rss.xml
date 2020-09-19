@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Enish]]></title><description><![CDATA[Dev, High-Tech and Bullshit]]></description><link>https://enishowk.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Sep 2020 22:36:32 GMT</lastBuildDate><item><title><![CDATA[NAS Homemade]]></title><description><![CDATA[Petit guide d'achat pour monter son propre NAS.]]></description><link>https://enishowk.github.io//posts/nas-homemade</link><guid isPermaLink="false">https://enishowk.github.io//posts/nas-homemade</guid><pubDate>Sat, 19 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hello. Le blog est inactif en ce moment mais en décembre 2019 je me suis monté mon propre NAS et j’avais commencé à écrire un article dessus. Mieux vaut tard que jamais, je le publie donc maintenant. &lt;/p&gt;
+&lt;p&gt;Tout d’abord, on pourrait se demander pourquoi s’embêter à faire soit-même son NAS alors que beaucoup de constructeur en propose des tout-faits. La raison principale est surtout le rapport puissance/prix. &lt;/p&gt;
+&lt;h2 id=&quot;hardware&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hardware&quot; aria-label=&quot;hardware permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Hardware&lt;/h2&gt;
+&lt;p&gt;Ayant actuellement un NAS une baie de chez Synology (115J). Celui-ci met quasiment 30/40 secondes à afficher son interface d’admin… Ses performances n’ont rien d’exceptionnelles et il n’est pas évolutif. Je souhaitais donc le remplacer par quelque chose de beaucoup plus puissant, à un tarif assez bas et surtout je voulais quelque chose qui consomme peu et que l’on entend pas. Ça tombe bien car &lt;a href=&quot;https://www.ldlc.com/informatique/pieces-informatique/carte-mere/c4293/+fv144-15386.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ASRock&lt;/a&gt; propose des cartes mères avec des processeurs qui consomment peu (TDP de 10W) et fanless.
+Il ne reste plus qu’à ajouter une alimentation, un boitier avec plusieurs baies, de la RAM et nous avons tout le matos. Voici ma config finale :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Modèle&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Carte mère + CPU&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.ldlc.com/fiche/PB00248155.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ASRock J5005-ITX&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RAM&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.ldlc.com/fiche/PB00201793.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;G.Skill 4 Go DDR4 2400Mhz&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HDD&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.ldlc.com/fiche/PB00153210.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Western Digital WD Red 4 To&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alim&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.ldlc.com/fiche/PB00260983.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;be quiet! Pure Power 11 300W 80PLUS Bronze&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Boitier&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.ldlc.com/fiche/PB00135558.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Fractal Design Node 304&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Libre à vous d’ajouter de la RAM, changer le boitier et de prendre une meilleure alimentation. J’ai choisi ce boitier car j’ai pu en recupérer un quasi neuf pour presque rien et que l’on peut y installer jusqu’à 6 disques dur. Attention cependant, la CM n’a que 4 port sata.&lt;/p&gt;
+&lt;p&gt;Nous avons donc notre NAS pour environ 330€ (sans les disques). En cherchant le meilleur prix avec des promos, vous pouvez largement vous en tirer pour moins de 300€. J’ai eu quasiment cette config pour 220€ en décembre avec un boitier d’occasion et un SSD en plus pour le système.&lt;/p&gt;
+&lt;p&gt;Si on compare avec un NAS Synology, voici celui qui s’en rapproche niveau prix : &lt;a href=&quot;https://www.ldlc.com/fiche/PB00235845.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Synology DS218+&lt;/a&gt;.
+Il n’a que 2 Go de DDR3 et son processeur est &lt;a href=&quot;https://cpu.userbenchmark.com/Compare/Intel-Pentium-Silver-J5005-vs-Intel-Celeron-J3355/m487063vsm247225&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;vraiment moins puissant&lt;/a&gt;. Même les modèles à plus de 800€ chez Synology sont moins puissant que la config du dessus.&lt;/p&gt;
+&lt;p&gt;Alors, c’est bien d’avoir mieux pour moins cher mais nous sommes obligé de tout configurer nous-même. On a rien sans rien. 🙂&lt;/p&gt;
+&lt;h2 id=&quot;software&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#software&quot; aria-label=&quot;software permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Software&lt;/h2&gt;
+&lt;p&gt;Concernant la distrib, nous avons plusieurs choix : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.openmediavault.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenMediaVault&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.freenas.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;FreeNAS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://xpenology.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Xpenology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;… et bien d’autres.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;FreeNAS requiert 8Go de RAM. Xpenology est un clone (Illégal) de DSM de Synology. Il reste donc OMV que j’ai choisi pour mon NAS. C’est gratuit, open source, et légal donc c’est parfait pour mon utilisation.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#conclusion&quot; aria-label=&quot;conclusion permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;L’installation et la configuration du NAS s’est avéré très simple et plutôt rapide. Les performances sont plus que correct. Il ne fait pas de bruit et la consommation se rapproche de la conso d’un NAS Synology. D’après les retours que j’ai lu, on se situe environ à 15W en utilisation.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Générer des UUID avec Sequelize]]></title><description><![CDATA[Configurer la gestion des UUID avec l'ORM Sequelize.]]></description><link>https://enishowk.github.io//posts/generer-des-uuid-avec-sequelize</link><guid isPermaLink="false">https://enishowk.github.io//posts/generer-des-uuid-avec-sequelize</guid><pubDate>Tue, 22 May 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Salut, ça faisait longtemps que je n’avais pas posté. Je vais essayer de prendre un rythme de publication un peu plus régulier.&lt;/p&gt;
+&lt;p&gt;Petit post concernant un problème que j’ai rencontré hier avec &lt;a href=&quot;http://docs.sequelizejs.com/variable/index.html#static-variable-DataTypes&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Sequelize&lt;/a&gt; et la gestion des UUID.&lt;/p&gt;
+&lt;p&gt;En effet, la génération des ID peut être faite de manière automatique et en auto-increment - heureusement me direz-vous - cependant, lorsqu’il s’agit de générer des UUID, cela se complique.&lt;br&gt;
+Si vous déclarez votre table avec une colonne UUID, sans la spécifier dans votre model, vous allez avoir des erreurs du type : “Unknown column ‘id’ in ‘field list’“. Car par défaut, Sequelize cherche une colonne ID, même si vous lui spécifiez une colonne UUID en Primary Key etc. &lt;/p&gt;
+&lt;p&gt;Pour régler ce problème, premièrement, dans votre fichier de migration &lt;code class=&quot;language-text&quot;&gt;migrations/create-users.js&lt;/code&gt;, il faut spécifier le bon DataType et le bon nom de colonne que vous souhaitez utiliser :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;queryInterface&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Sequelize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+    queryInterface&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createTable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Users&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      uuid&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        allowNull&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        primaryKey&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      username&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        allowNull&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;STRING&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      password&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        allowNull&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;STRING&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      createdAt&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        allowNull&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DATE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      updatedAt&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        allowNull&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DATE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;down&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;queryInterface&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; queryInterface&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;dropTable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Users&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, il faut modifier votre User Model. Habituellement, si vous utilisez des ID, vous n’avez pas besoin de rajouter la colonne “ID”. Avec les UUID, vous êtes obligés. Le fichier &lt;code class=&quot;language-text&quot;&gt;models/users.js&lt;/code&gt; doit être configuré comme ceci :  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;queryInterface&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Sequelize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; User &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; queryInterface&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;User&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      uuid&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        primaryKey&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        defaultValue&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UUIDV4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      username&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;STRING&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      password&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Sequelize&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;STRING&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; User&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cependant, il reste un problème lorsque l’on ajoute des datafixtures. En effet, Sequelize ne gère pas l’ajout dynamique des UUID, il faut donc ajouter la lib &lt;a href=&quot;https://github.com/kelektiv/node-uuid&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;node-uuid&lt;/a&gt; et modifier le fichier &lt;code class=&quot;language-text&quot;&gt;seeders/demo-user.js&lt;/code&gt; comme ceci par exemple :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; uuidv4 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;uuid/v4&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; bcrypt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;bcrypt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;queryInterface&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+    queryInterface&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bulkInsert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;Users&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          uuid&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;uuidv4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          username&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;user1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          password&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; bcrypt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;hashSync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          updatedAt&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          createdAt&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;down&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;queryInterface&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; queryInterface&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bulkDelete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Users&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;J’espère que cela vous aidera. Si vous avez des questions ou de meilleures façons de procéder, contactez-moi sur &lt;a href=&quot;https://twitter.com/Enish__&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Twitter&lt;/a&gt;. 🙂&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Créer un bot sur Discord]]></title><description><![CDATA[Créer un bot sur Discord est quelques chose de très simple. Bien qu'il existe plusieurs façon de faire, je vous propose de le faire fonctionner à l'aide de NodeJS et du module discord.js.]]></description><link>https://enishowk.github.io//posts/creer-un-bot-sur-discord</link><guid isPermaLink="false">https://enishowk.github.io//posts/creer-un-bot-sur-discord</guid><pubDate>Sun, 03 Dec 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f9ed5bfdf757d85746e804bacc51d191/29d31/7-discord-bots-to-enhance-your-server.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAcyqEgF//8QAGBABAQADAAAAAAAAAAAAAAAAAQIDEiD/2gAIAQEAAQUCgN8hDHH/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAHBAAAAYDAAAAAAAAAAAAAAAAAAECESAhIjFB/9oACAEBAAY/AifXRgm4/wD/xAAZEAEAAgMAAAAAAAAAAAAAAAABACERIFH/2gAIAQEAAT8hZ04NKhbwVr//2gAMAwEAAgADAAAAELv/AP/EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EIf/xAAWEQEBAQAAAAAAAAAAAAAAAAABERD/2gAIAQIBAT8QIJn/xAAaEAACAgMAAAAAAAAAAAAAAAABEQAhIDFx/9oACAEBAAE/EFLJEKB1NgJEbjx//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f9ed5bfdf757d85746e804bacc51d191/8ac56/7-discord-bots-to-enhance-your-server.webp 240w,
+/static/f9ed5bfdf757d85746e804bacc51d191/d3be9/7-discord-bots-to-enhance-your-server.webp 480w,
+/static/f9ed5bfdf757d85746e804bacc51d191/426ac/7-discord-bots-to-enhance-your-server.webp 700w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f9ed5bfdf757d85746e804bacc51d191/09b79/7-discord-bots-to-enhance-your-server.jpg 240w,
+/static/f9ed5bfdf757d85746e804bacc51d191/7cc5e/7-discord-bots-to-enhance-your-server.jpg 480w,
+/static/f9ed5bfdf757d85746e804bacc51d191/29d31/7-discord-bots-to-enhance-your-server.jpg 700w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/f9ed5bfdf757d85746e804bacc51d191/29d31/7-discord-bots-to-enhance-your-server.jpg&quot;
+          alt=&quot;7 discord bots to enhance your server&quot;
+          title=&quot;7 discord bots to enhance your server&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Vous l’aurez donc compris, il fonctionnera en JavaScript mais il existe d’autres librairies, notamment en Python, Java, PHP, C#, etc. Voici une liste des librairies disponibles : &lt;a href=&quot;https://discordapi.com/unofficial/libs.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://discordapi.com/unofficial/libs.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Le prérequis pour ce tutoriel est d’avoir un serveur NodeJS (minimum v.6.0.0) installé, ainsi qu’un compte discord.&lt;/p&gt;
+&lt;h1 id=&quot;création-de-lapplication&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cr%C3%A9ation-de-lapplication&quot; aria-label=&quot;création de lapplication permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Création de l’application&lt;/h1&gt;
+&lt;p&gt;Afin d’avoir un bot disponible sur son serveur, il faut se rendre sur &lt;a href=&quot;https://discordapp.com/developers/docs/intro&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;la partie developper&lt;/a&gt; du site de Discord afin de créer une nouvelle application.
+Pour ce faire, allez dans &lt;strong&gt;“My Apps”&lt;/strong&gt; et cliquez sur &lt;strong&gt;“New app”&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/23a8ac6debc491429a3b47959bcc27fd/1ffbd/Screen-Shot-2017-12-03-at-16.58.12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAADvUlEQVQ4y12T3W/bVBjG80/QNlk/8+HEjhN/xY7jxInj2G1CRtqyDQRCSs2kCQESAglQW3XcMk0CNFZAQ5N2M7Yu3cpYJ1Fp4mpXSFxwNY0bJDSEhFjF1JtSn56X97gV67h49L4+Pv6d5zx5E+O49LBlakH3hV7w44NHCz89+DX4+eHvAau1WjVIjDwXTIwfC8bHEqh4MDYaDxLxoahOjCeCY4nhBewXRkdHTsfjQ8OxS5cue3c2t+DeD/fh8d+78GRnFx5t/wV//LkNN299B1e/uQGD9Q24MbiF2oD1m9/C5t3vsd6G62vrcGfzoN+8uwWrq1+1Yh+ef+gO7lF6bYuSL9d2yPkrT8i5K4/Jucvb5MK1XfLFICSrayH5HHUR9enVPez3ydcb++Ti9T2sFNfJ3uoAYPmTX5yY5b/tzr16Fjonl2j7xDJtnzxLO6c+ojMnVmhrdpG6KG9uibaYZpdos7cYyZ9fjp6n55eoN7tIvPkVqHhvOrFUOunyggBO04FGs0GFvAC8wEOKy4CsKqBoKqQyGUhzHGR5HoSCCLk8DxyfBR73ZvMincoXSTpfgMnJCSeWyyuupFXAaXXAdqYp6yW1AkJRh5LZAL/dA9WoRdLKNqoGDa8L092XwKg22RrVzAZRDBuSnMiAkluQdWAqKgZFsQq8qIKsV6DZfh4M2wG91ogkG2WY6Z2G/lsXoO7N40EmLVt1opWrMJnmEShILgOU8GSlVKGHYOALGkiaCVbdBROBFbsJ5WoD2IeW44PXmYXWdBdcv0NbM12iV+owPpU9ADIIwiKHR4Ei9pJWjsAyvmd7FHStmDaolQao2KuGRUumTdj7qbTgxLhcwZVUvEanB7VGi4pS6RCoRiCvfRyq9VYEU3ULgRaDYM4lqLttdO5i7gZh6xEwKxSjK+vsVN16xmERD9IxCo1BGBClGVWWG9TcOXhj+T4E792mpu0T5jyZEZ9myDai02eABawKuy6CWWVS9SrImgZ+7wx88NkOvPvxb7ThnyKSpkMqKzFg8T/g/zNkURjoXDfRpWEdOrRwnGqReq+sQPvFd6hmGETF76Mro8MmQvbxuiHWPVSIwBCBIToMMYpQr9gh5hZi8KHCpFewN0PMEXsr1C3vH7nExiaHGfLFaRa2N9ONxoA5lXG4RRnnEQdcx1+TL5ZAkHTIH5Eol/EfI8Pxl1fgzPsbYPuvQTwx5MUmk9wIuuw7rt93vXY/X1D6mZzYT3H5fhKVzj7tkxnhoB555gS1nysY/XSu+PrYRGr4X92NJNZZnGnxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/23a8ac6debc491429a3b47959bcc27fd/8ac56/Screen-Shot-2017-12-03-at-16.58.12.webp 240w,
+/static/23a8ac6debc491429a3b47959bcc27fd/d3be9/Screen-Shot-2017-12-03-at-16.58.12.webp 480w,
+/static/23a8ac6debc491429a3b47959bcc27fd/e46b2/Screen-Shot-2017-12-03-at-16.58.12.webp 960w,
+/static/23a8ac6debc491429a3b47959bcc27fd/f992d/Screen-Shot-2017-12-03-at-16.58.12.webp 1440w,
+/static/23a8ac6debc491429a3b47959bcc27fd/882b9/Screen-Shot-2017-12-03-at-16.58.12.webp 1920w,
+/static/23a8ac6debc491429a3b47959bcc27fd/d21eb/Screen-Shot-2017-12-03-at-16.58.12.webp 2108w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/23a8ac6debc491429a3b47959bcc27fd/8ff5a/Screen-Shot-2017-12-03-at-16.58.12.png 240w,
+/static/23a8ac6debc491429a3b47959bcc27fd/e85cb/Screen-Shot-2017-12-03-at-16.58.12.png 480w,
+/static/23a8ac6debc491429a3b47959bcc27fd/d9199/Screen-Shot-2017-12-03-at-16.58.12.png 960w,
+/static/23a8ac6debc491429a3b47959bcc27fd/07a9c/Screen-Shot-2017-12-03-at-16.58.12.png 1440w,
+/static/23a8ac6debc491429a3b47959bcc27fd/29114/Screen-Shot-2017-12-03-at-16.58.12.png 1920w,
+/static/23a8ac6debc491429a3b47959bcc27fd/1ffbd/Screen-Shot-2017-12-03-at-16.58.12.png 2108w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/23a8ac6debc491429a3b47959bcc27fd/d9199/Screen-Shot-2017-12-03-at-16.58.12.png&quot;
+          alt=&quot;Screen-Shot-2017-12-03-at-16.58.12&quot;
+          title=&quot;Screen-Shot-2017-12-03-at-16.58.12&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Remplissez le formulaire (voir screen) et cliquez sur &lt;strong&gt;“Create App”&lt;/strong&gt;.
+Il suffit ensuite de convertir votre App en Bot en cliquant sur le bouton &lt;strong&gt;“Create a Bot User”&lt;/strong&gt; :
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/06fa782eb60d1caa0628041a1282cd8b/6b95e/Screen-Shot-2017-12-03-at-17.02.46.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA8UlEQVQY013OS0rDUBTG8SzGJjaPNqmJoUlvnr21xUpfYIsTEUFwIA6KDgRnHVRwpNvoCroGwSX9vU19gIMf3+VwOPfT7GbAgdHAsDx00/3H+1X7zt3eod2q6HWHWt2u6KZTzbTT8YzuYEgYJaS5JC3kPpUkK5WiyjQvECrjtMQPO7h+m7iYIeScRC6IsgmWKqe9vr/xvFrRHU4pR+f0phfIyQI5ntPv5ZydCAYyYdTvUBYZ7aRUnwuCKOf2acvD+oPHl0+ulxscL0S7u19yeXWDoa5bfoz54yjG9o6x3T+Ot9fYaYWqpWoaCJWieltNny+LI4s2bhChEwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/06fa782eb60d1caa0628041a1282cd8b/8ac56/Screen-Shot-2017-12-03-at-17.02.46.webp 240w,
+/static/06fa782eb60d1caa0628041a1282cd8b/d3be9/Screen-Shot-2017-12-03-at-17.02.46.webp 480w,
+/static/06fa782eb60d1caa0628041a1282cd8b/e46b2/Screen-Shot-2017-12-03-at-17.02.46.webp 960w,
+/static/06fa782eb60d1caa0628041a1282cd8b/f992d/Screen-Shot-2017-12-03-at-17.02.46.webp 1440w,
+/static/06fa782eb60d1caa0628041a1282cd8b/bb4a2/Screen-Shot-2017-12-03-at-17.02.46.webp 1458w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/06fa782eb60d1caa0628041a1282cd8b/8ff5a/Screen-Shot-2017-12-03-at-17.02.46.png 240w,
+/static/06fa782eb60d1caa0628041a1282cd8b/e85cb/Screen-Shot-2017-12-03-at-17.02.46.png 480w,
+/static/06fa782eb60d1caa0628041a1282cd8b/d9199/Screen-Shot-2017-12-03-at-17.02.46.png 960w,
+/static/06fa782eb60d1caa0628041a1282cd8b/07a9c/Screen-Shot-2017-12-03-at-17.02.46.png 1440w,
+/static/06fa782eb60d1caa0628041a1282cd8b/6b95e/Screen-Shot-2017-12-03-at-17.02.46.png 1458w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/06fa782eb60d1caa0628041a1282cd8b/d9199/Screen-Shot-2017-12-03-at-17.02.46.png&quot;
+          alt=&quot;Screen-Shot-2017-12-03-at-17.02.46&quot;
+          title=&quot;Screen-Shot-2017-12-03-at-17.02.46&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Vous obtiendrez alors un écran spécifique avec le token de votre Bot. Notez le bien, on en aura besoin plus tard.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2636a225a92532209256dd3f9015e933/a5120/Screen-Shot-2017-12-03-at-17.01.04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAADhUlEQVQ4y52TXWhbZRjHgzfeFPRCXFtr07XNx8lJzklyvnLOSXKS5XNNa1zHGPh5saI4h7hRo7QuE6/UfVgnTL0YYwpDrwSpLbqNhQlO1CkiMmVYIZ1MJhMvlMo5x/P3eU86Z70RDPx4nzcv+fP/P8+TwHSs0FfNj+598JH7n760crX17coPre61n1un3nm7lRTCLU0RiISPKsd9btwViW9lVP99lr5vyxKfC+x5fD60uPwxLlxcwU/Xgau/AN3rLr66dA3vLl7A0ocXsXT6CywT71O9+EHvfrrzNdWf4+z5b7B85kt89MkKjp9877VAzJwPHT7x42/En3OHL9uzL1529r3wndM6+L0z93LXefaVVTpXnfmFVad1qOs8dbDrzL7U9e/7j15x2q9eoXN17cCxX7G7/emRwFAwGpIy1bVMfhKEpxh1T8rUvLRe97TcpCfIJU9Uyv+FndYnEBNzC4FNA4OhuJhaqzemUKrUPKrBCylEeRH5YgmmVURazSClaBuR1Zsomi1pOkJRfiEwOBQMJZLKWkrWkZR0T0xrSKRUcAkJ1cZ2WFvvhZotQtaykDM5IrtOzkfRGXlbMwuIxMSbgmnFIMGMRzUY0XgahcoUGs0dyBarMHJboJl5wvJR9CwkzST3BsNWDQvhfwuSO09YF2QO9ayJcrWMSq0Cq1SGkd8Ck2GVfHEmZpVrDJtc9gT7B+/2Bcs1GopZoB7KEChyhHrY2LEPDz/xBh7a8zpqzRlohkmiJV9YNfLUGgVzB57DM/vbdpJaFuWT5PCuYV9Qpz5JqrkeWaXIKaiFbcg1ZmA1dkHL1iFKbADUa/oxi0uOcPKtUzh+4k2bE2Rw8dTGyOTMY+7iogKeMLIW0rJC04v5jjnqa/QfsLaEOZ6927FEEuPRBBMc/nvKdJJgz2GET2Hr1DSqE01U6lOoNZooVhvQc8Ue2QJN2ULzvjZ27jpkT2x/EuMRWpuBXuTfNcPyKLJDtcsgB66Q1lyK51K/CMsVNMsVZcOlbXBFH80tTT7q7pw5+kd9ei/GwtwRJhhhu8dcsMGkZLY+uh9ZSGf8M0rRWLwYg3oVE2gLBPauQrea2PbA86jc8xhGw7FjgTvu7B8KRfgl+mecj3CJc1R3yHpn8zjXGRmL+ufm0DrjGxkZ4zrDI2Od/oFNZ4eCwc+Co+HdAfrcQvQRtxO3/T/6btS3/gV5agvyom8xLQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/2636a225a92532209256dd3f9015e933/8ac56/Screen-Shot-2017-12-03-at-17.01.04.webp 240w,
+/static/2636a225a92532209256dd3f9015e933/d3be9/Screen-Shot-2017-12-03-at-17.01.04.webp 480w,
+/static/2636a225a92532209256dd3f9015e933/e46b2/Screen-Shot-2017-12-03-at-17.01.04.webp 960w,
+/static/2636a225a92532209256dd3f9015e933/f992d/Screen-Shot-2017-12-03-at-17.01.04.webp 1440w,
+/static/2636a225a92532209256dd3f9015e933/882b9/Screen-Shot-2017-12-03-at-17.01.04.webp 1920w,
+/static/2636a225a92532209256dd3f9015e933/4391b/Screen-Shot-2017-12-03-at-17.01.04.webp 2380w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/2636a225a92532209256dd3f9015e933/8ff5a/Screen-Shot-2017-12-03-at-17.01.04.png 240w,
+/static/2636a225a92532209256dd3f9015e933/e85cb/Screen-Shot-2017-12-03-at-17.01.04.png 480w,
+/static/2636a225a92532209256dd3f9015e933/d9199/Screen-Shot-2017-12-03-at-17.01.04.png 960w,
+/static/2636a225a92532209256dd3f9015e933/07a9c/Screen-Shot-2017-12-03-at-17.01.04.png 1440w,
+/static/2636a225a92532209256dd3f9015e933/29114/Screen-Shot-2017-12-03-at-17.01.04.png 1920w,
+/static/2636a225a92532209256dd3f9015e933/a5120/Screen-Shot-2017-12-03-at-17.01.04.png 2380w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/2636a225a92532209256dd3f9015e933/d9199/Screen-Shot-2017-12-03-at-17.01.04.png&quot;
+          alt=&quot;Screen-Shot-2017-12-03-at-17.01.04&quot;
+          title=&quot;Screen-Shot-2017-12-03-at-17.01.04&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;initialisation-et-configuration&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#initialisation-et-configuration&quot; aria-label=&quot;initialisation et configuration permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Initialisation et configuration&lt;/h1&gt;
+&lt;p&gt;Démarrez un nouveau projet et installez &lt;code class=&quot;language-text&quot;&gt;Discord.js&lt;/code&gt; à l’aide de NPM :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ npm install --save discord.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Créez ensuite un fichier &lt;code class=&quot;language-text&quot;&gt;bot.js&lt;/code&gt; et mettez ceci dedans :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Discord &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;discord.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Discord&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Client&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ready&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Logged in as &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tag&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;msg&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ping&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    msg&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Pong!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remplacez &lt;code class=&quot;language-text&quot;&gt;token&lt;/code&gt; par celui de votre application, et exécutez la commande :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ node bot.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Votre bot est désormais connecté sur votre serveur. Pour le moment, il ne répond qu’au message &lt;strong&gt;ping&lt;/strong&gt; mais libre à vous d’ajouter des commandes.&lt;/p&gt;
+&lt;p&gt;Vous pouvez diffuser de la musique ou des sons, récupérer des infos depuis des API, faire du scrapping ou vous notifier de différentes choses, les possibilités sont multiples.&lt;/p&gt;
+&lt;p&gt;Voici la &lt;a href=&quot;https://discord.js.org/#/docs/main/stable/general/welcome&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;documentation complète de Discord.js&lt;/a&gt; afin de vous donner des idées. Ou bien encore mon bot, disponible sur &lt;a href=&quot;https://github.com/Enishowk/Bot-Discord&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;mon GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Je présenterai des fonctionnalités plus poussée dans une autre partie. Si vous avez des questions ou des suggestions, je suis disponible sur &lt;a href=&quot;https://twitter.com/Enish__&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Week Rewind #2]]></title><description><![CDATA[Dans cette rubrique, je posterais chaque semaine une synthèse de ma veille techno. Cela pourra être des découvertes en tout genre, des tutos, des librairies ou tout simplement des blog posts qui m'ont marqué.]]></description><link>https://enishowk.github.io//posts/week-rewind-2</link><guid isPermaLink="false">https://enishowk.github.io//posts/week-rewind-2</guid><pubDate>Sun, 26 Nov 2017 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Si vous souhaitez approfondir vos connaissances en Javascript, voici une excellente ressource : &lt;a href=&quot;https://x-team.com/javascript-resources/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://x-team.com/javascript-resources/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utilisation des Regex en JS : &lt;a href=&quot;https://codeburst.io/an-introduction-to-regular-expressions-regex-in-javascript-1d3559e7ac9a&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://codeburst.io/an-introduction-to-regular-expressions-regex-in-javascript-1d3559e7ac9a&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vous êtes fan d’Emoji et de Git ? &lt;a href=&quot;https://github.com/carloscuesta/gitmoji-cli&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/carloscuesta/gitmoji-cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utiliser la Fetch API en JS avec du Symfony 3 : &lt;a href=&quot;https://www.ilphrin.com/planet/2017/11/18/fetch-api-symfony-3.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.ilphrin.com/planet/2017/11/18/fetch-api-symfony-3.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apprendre à faire des tests unitaires en Swift avec Xcode : &lt;a href=&quot;http://eleven-labs.developpez.com/tutoriels/swift/tests-unitaires-avec-xcode/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;http://eleven-labs.developpez.com/tutoriels/swift/tests-unitaires-avec-xcode/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pour finir, une liste énorme de livres sur différents langages de programmation : &lt;a href=&quot;https://github.com/EbookFoundation/free-programming-books&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/EbookFoundation/free-programming-books&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Mocker son API REST avec Json-server]]></title><description><![CDATA[Lorsque l'on développe le front d'une application web basé sur une API REST, il peut arriver que les ressources back ne soient pas encore disponibles. Ou que le serveur qui héberge notre back tombe en rade. On se retrouve donc bloqué, avec un front sans ressource disponible.]]></description><link>https://enishowk.github.io//posts/mocker-son-api-rest-avec-json-server</link><guid isPermaLink="false">https://enishowk.github.io//posts/mocker-son-api-rest-avec-json-server</guid><pubDate>Thu, 23 Nov 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;L’intérêt de cet article et de vous faire découvrir une manière de mocker vos API REST, grâce à un petit outil, &lt;strong&gt;&lt;a href=&quot;https://github.com/typicode/json-server&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;json-server&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;json-server&lt;/strong&gt; est un mini serveur, fonctionnant avec nodeJS permettant d’exposer des ressources, via une URL.&lt;/p&gt;
+&lt;p&gt;La phrase de présentation est simple :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Get a full fake REST API with zero coding in less than 30 seconds (seriously)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Et il faut avouer qu’ils ont raison. &lt;/p&gt;
+&lt;h1 id=&quot;installation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#installation&quot; aria-label=&quot;installation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Tout d’abord, pour l’installation, rien de plus simple :
+&lt;code class=&quot;language-text&quot;&gt;$ npm install -g json-server&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ensuite, créez-vous un fichier &lt;code class=&quot;language-text&quot;&gt;db.json&lt;/code&gt; qui contiendra vos données avec par exemple :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;posts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;json-server&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;typicode&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;some comment&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;postId&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;profile&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;typicode&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pour finir, lancez le serveur grâce à cette commande :
+&lt;code class=&quot;language-text&quot;&gt;$ json-server --watch db.json&lt;/code&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aae04f6725bdbf918df37a44d0f52bb5/61946/launch-json-server.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABwElEQVQoz6XSvUsbYRzA8V/urkuLUUqHIiFqk3tJLi+Xl+dJLBp1sd27NC0dCkUimLZwDjq5uAmSxSUhuAUcHBwVOhX6N3SU0kXwXRGay3O//i5N0gylGH3gwz3cPffl4bkDoIHfvwXw6Osknh0yPP/J8ewHx6sjjpc3HM+vaX7Jm8fHvHV60p4jYj9G8iQE3bFgr1dKW3X8UGn8Km02RKmyIxY2tsXbTx9FsVwmtigu2eJNeVm8Wvws3tmr/ZrvV9bwddne6wVhIlkDs4Bg5BxQswgqQwilEcaMjijCuPlHMIIQ0InRoQsI0vPR8MEmgK/dk0JmVYnnUDJSTdAtF7SkC3rK9UWYK0W7sh3Mlc0+UebI8TxKurUP3aCiWdWnhZf4JD/nDGcL3hVHWAFpMe2admpk/qcF3jo1cdALylqy5udzOJSecvyZaXzMZ3A4O42KSQv1OwQlNVEbYrMU4M6DGEeFgJa6TezfQUW3qmBy72GTiAE57WA48fcMH8ZYXUo894IuROgrD8rM0Q6TX3pB+jUqoFnezRNyMaBTeteBZ7HdbtDnkxUVZHkeJPnFPZje6QEEwtApy/ckwSM//AZfKCQPBVMY9wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/aae04f6725bdbf918df37a44d0f52bb5/8ac56/launch-json-server.webp 240w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/d3be9/launch-json-server.webp 480w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/e46b2/launch-json-server.webp 960w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/f992d/launch-json-server.webp 1440w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/87ef7/launch-json-server.webp 1546w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/aae04f6725bdbf918df37a44d0f52bb5/8ff5a/launch-json-server.png 240w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/e85cb/launch-json-server.png 480w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/d9199/launch-json-server.png 960w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/07a9c/launch-json-server.png 1440w,
+/static/aae04f6725bdbf918df37a44d0f52bb5/61946/launch-json-server.png 1546w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/aae04f6725bdbf918df37a44d0f52bb5/d9199/launch-json-server.png&quot;
+          alt=&quot;launch-json-server&quot;
+          title=&quot;launch-json-server&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Et voilà.&lt;/p&gt;
+&lt;p&gt;Vous pouvez également vous rendre sur &lt;a href=&quot;http://localhost:3000&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;http://localhost:3000&lt;/a&gt; afin d’obtenir une liste des ressources et méthodes HTTP disponible.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 121.25000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAABYlAAAWJQFJUiTwAAACgUlEQVQ4y51UTY/SYBAu0b3ozR9h/BXbgz/A8yYe/QEYCAdY9WhiFBI2sBASTp6WLDEaxYsX9ejNi9GDblulUL773bdlnHmhpAstdp3kybzvtPN0pvMhCCi3BOE2qrvC9WuH3Y/fxPPPP8QPX4fip+9z8YsSiPeOHoj4PAmH3FcQ7gihPM0/fPmsUoLSk8e+rPThj6qBNp7CdK6D6wXw9l0PCoUClEolDjrncjkoFouQz+f94+NHkM1mzzeEPyW5Ayg+85lt23SE2XQKw+EQDF2HbQmCAFzX5WfP8xhpVR282RDKknSmo6OiKAyxVFV1ie9sgAQb+L6/JAntKJyw3+9HCOVVhAyFvkwgnxQg0l1CjIoTYrqM0iFJSxhGiFntRjgYDBj+E4iTVZZx5hhCSZI65DAajZimaTCbzTgmkzFiAoZhJEUdTximvFgseJUp7W1ECaPh7U0ZI2FhO6RJOZGQUiYjpsgsy4pNL440mVBWOmTVnYCRTxJB6ggvcFIoLlnTmWU7qdsmscq/pN+cUNcNBleQPUVZVdl1HV4UqjRpx3FoVvmZtG3Z/Bm1EY7g/j6kF9DI+5CAZ2p0rumOo8WJiJDmfi9h2DYYEUboAS0Qy15FQ1WnSA3TvHrbzGcTNtKG1OCJvZiqKJJ0wQn7E4uN5xZtnX9Vd/8sbybFXTLXh0u7MA5bEjvLZ/xzAfOCwA/wh6+By46xSyA7rcEIvPU+fB0lfMWXA1YvbBsqBPqCaVpYGBu1CSYWaL3xdwQ74n3Il6lUKkftdvuk0Wg8bzab5RB4L0fvKzTK9dPTcr1e56jVai9ardZJtVq9z9m63W4G1QHiBuLmf4J8D3q9XuYv4Mfm0lHVRdcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/82a2218332bd7472b62fe0043c31ab91/8ac56/json-server-localhost.webp 240w,
+/static/82a2218332bd7472b62fe0043c31ab91/d3be9/json-server-localhost.webp 480w,
+/static/82a2218332bd7472b62fe0043c31ab91/e46b2/json-server-localhost.webp 960w,
+/static/82a2218332bd7472b62fe0043c31ab91/f992d/json-server-localhost.webp 1440w,
+/static/82a2218332bd7472b62fe0043c31ab91/ba360/json-server-localhost.webp 1630w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/82a2218332bd7472b62fe0043c31ab91/8ff5a/json-server-localhost.png 240w,
+/static/82a2218332bd7472b62fe0043c31ab91/e85cb/json-server-localhost.png 480w,
+/static/82a2218332bd7472b62fe0043c31ab91/d9199/json-server-localhost.png 960w,
+/static/82a2218332bd7472b62fe0043c31ab91/07a9c/json-server-localhost.png 1440w,
+/static/82a2218332bd7472b62fe0043c31ab91/1e5d2/json-server-localhost.png 1630w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/82a2218332bd7472b62fe0043c31ab91/d9199/json-server-localhost.png&quot;
+          alt=&quot;json-server-localhost&quot;
+          title=&quot;json-server-localhost&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Vous l’aurez compris, une simple requête GET sur l’url &lt;a href=&quot;http://localhost:3000/posts/1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;http://localhost:3000/posts/1&lt;/a&gt; et vous obtiendrez votre ressource “posts” qui correspond à l’id 1.&lt;/p&gt;
+&lt;h1 id=&quot;customisation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#customisation&quot; aria-label=&quot;customisation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Customisation&lt;/h1&gt;
+&lt;p&gt;La documentation de &lt;strong&gt;json-server&lt;/strong&gt; est très bien fournie, et vous permettra de tout personnaliser afin que cela ressemble exactement à votre réelle API.&lt;/p&gt;
+&lt;p&gt;Personnellement, je l’utilise couplé à &lt;strong&gt;&lt;a href=&quot;https://github.com/axios/axios&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Axios&lt;/a&gt;&lt;/strong&gt; sur des projets React par exemple. Cela permet, en changeant une seule ligne de config, de passer de notre vrai back, au serveur json afin de mocker les données.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si vous travaillez avec &lt;strong&gt;React&lt;/strong&gt; et &lt;strong&gt;Browser-sync&lt;/strong&gt;, il y a de fortes chances pour que votre port 3000 soit déjà utilisé. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Vous pouvez donc au choix, exécuter cette commande :
+&lt;code class=&quot;language-text&quot;&gt;$ json-server --watch db.json --port 3100&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Ou bien créer un fichier de config &lt;code class=&quot;language-text&quot;&gt;json-server.json&lt;/code&gt; et y ajouter :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;port&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3100&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Afin de coller exactement avec votre back, il est possible de défini ses propres &lt;a href=&quot;https://github.com/typicode/json-server#add-custom-routes&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;routes&lt;/a&gt; afin de récupérer ses ressources.
+Les routes sont à ajouter dans un fichier &lt;code class=&quot;language-text&quot;&gt;routes.json&lt;/code&gt;. Voici un exemple de routes custom :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;/posts/:category&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/posts?category=:category&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;/articles\\?id=:id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/posts/:id&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cela va définir les routes comme ceci :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;posts&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;javascript # → &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;posts&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;category&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;javascript
+&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;articles&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;id&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; # → &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;posts&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Enfin, il ne reste plus qu’à ajouter un petit alias NPM/Yarn dans votre &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; afin de lancer le server plus simplement :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;json:server&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;json-server --watch db.json -c json-server.json --routes routes.json&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Toute modification des fichiers de config est prise en charge instannément. Inutile de relancer le serveur.  &lt;/p&gt;
+&lt;p&gt;Pour finir, voici quelques utilisations possibles :&lt;br&gt;
+&lt;strong&gt;Filter&lt;/strong&gt; : &lt;code class=&quot;language-text&quot;&gt;GET /posts?title=json-server&amp;amp;author=typicode&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Paginate&lt;/strong&gt; or &lt;strong&gt;Limit&lt;/strong&gt; : &lt;code class=&quot;language-text&quot;&gt;GET /posts?_page=7&amp;amp;_limit=20&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Sort&lt;/strong&gt; / &lt;strong&gt;Order&lt;/strong&gt; : &lt;code class=&quot;language-text&quot;&gt;GET /posts?_sort=views&amp;amp;_order=asc&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Search&lt;/strong&gt; : &lt;code class=&quot;language-text&quot;&gt;GET /posts?q=internet&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Quelques liens pour générer des données au format JSON :
+&lt;a href=&quot;https://github.com/Marak/faker.js&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/Marak/faker.js&lt;/a&gt;
+&lt;a href=&quot;https://github.com/boo1ean/casual&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/boo1ean/casual&lt;/a&gt;
+&lt;a href=&quot;https://www.json-generator.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.json-generator.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Si vous avez des questions ou des suggestions, je suis disponible sur &lt;a href=&quot;https://twitter.com/Enish__&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Twitter&lt;/a&gt;. 😉&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Week Rewind #1]]></title><description><![CDATA[Dans cette rubrique, je posterais chaque semaine une synthèse de ma veille techno. Cela pourra être des découvertes en tout genre, des tutos, des librairies ou tout simplement des blog posts qui m'ont marqué.]]></description><link>https://enishowk.github.io//posts/week-rewind-1</link><guid isPermaLink="false">https://enishowk.github.io//posts/week-rewind-1</guid><pubDate>Sun, 19 Nov 2017 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Commençons par du JS. Ce post permet de comprendre la fonction &lt;code class=&quot;language-text&quot;&gt;map()&lt;/code&gt;. Il existe une suite avec &lt;code class=&quot;language-text&quot;&gt;filter()&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;reduce()&lt;/code&gt;.
+&lt;a href=&quot;https://codeburst.io/learn-understand-javascripts-map-function-ffc059264783&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://codeburst.io/learn-understand-javascripts-map-function-ffc059264783&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Async Await&lt;/strong&gt;, par l’exemple :&lt;br&gt;
+&lt;a href=&quot;https://codeburst.io/javascript-es-2017-learn-async-await-by-example-48acc58bad65&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://codeburst.io/javascript-es-2017-learn-async-await-by-example-48acc58bad65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Si vous souhaitez découvrir les nouveautés de &lt;strong&gt;React 16&lt;/strong&gt;, ce post est fait pour vous : &lt;a href=&quot;https://hackernoon.com/getting-started-with-react-16-5ebd823d6990&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://hackernoon.com/getting-started-with-react-16-5ebd823d6990&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Découverte d’une lib pour créer des formulaires avec React -&gt; &lt;strong&gt;form-for&lt;/strong&gt; : &lt;a href=&quot;https://hackernoon.com/introducing-form-for-reactjs-forms-made-easy-d82d9f5026be&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://hackernoon.com/introducing-form-for-reactjs-forms-made-easy-d82d9f5026be&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Une librairie pour créer des graphiques en JS -&gt; &lt;strong&gt;Frappé Charts&lt;/strong&gt; :
+&lt;a href=&quot;https://github.com/frappe/charts&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/frappe/charts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pour en apprendre plus sur &lt;strong&gt;Webpack&lt;/strong&gt;, Grafikart a fait une très bonne formation dessus :
+&lt;a href=&quot;https://www.grafikart.fr/formations/webpack&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.grafikart.fr/formations/webpack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Si vous aimez customiser votre OS, voici le thème &lt;strong&gt;ARC&lt;/strong&gt;, apprécié des Linuxiens, porté sur Windows :
+&lt;a href=&quot;https://niivu.deviantart.com/art/Arc-704024954&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://niivu.deviantart.com/art/Arc-704024954&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Ghost, Debian 9, Sqlite, Apache, Node 8.9, SSL]]></title><description><![CDATA[Le moteur de blog de Ghost est assez bien foutu, tourne avec NodeJS et permet une customisation assez poussée. Cependant, son installation peut s'avérer problématique lorsque l'on s'écarte des recommandations.]]></description><link>https://enishowk.github.io//posts/ghost-blog-debian-9-sqlite</link><guid isPermaLink="false">https://enishowk.github.io//posts/ghost-blog-debian-9-sqlite</guid><pubDate>Fri, 17 Nov 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Ghost recommande :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 16.04&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;NGINX (minimum of 1.9.5 for SSL)&lt;/li&gt;
+&lt;li&gt;Node v6 installed via NodeSource&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bien sûr, mon serveur tourne sous Debian 9, Apache, Node 8.9 et je voulais une base de données Sqlite. &lt;/p&gt;
+&lt;p&gt;Après avoir eu quelques problèmes pendant l’installation, je voulais faire un petit post explicatif à ce sujet.&lt;/p&gt;
+&lt;h1 id=&quot;installation-dapache-nodejs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#installation-dapache-nodejs&quot; aria-label=&quot;installation dapache nodejs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Installation d’Apache, NodeJS&lt;/h1&gt;
+&lt;p&gt;Je pars du principe que vous avez déjà Debian 9 à jour, Apache et Node d’installés. Mais si besoin, voici les commandes pour les installer.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ apt-get install apache2&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install -y nodejs&lt;/code&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;ajout-dun-utilisateur&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ajout-dun-utilisateur&quot; aria-label=&quot;ajout dun utilisateur permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ajout d’un utilisateur&lt;/h1&gt;
+&lt;p&gt;On va tout d’abord commencer par créer un nouvel utilisateur, évitant ainsi de lancer notre serveur node en tant que root. Ghost précise :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;N’appelez pas votre utilisateur &lt;strong&gt;ghost&lt;/strong&gt;, l’outil Ghost-CLI va créer un utilisateur &lt;strong&gt;ghost&lt;/strong&gt; pour administrer le blog. L’utilisateur que vous créez va être utilisé pour administrer le serveur.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Il suffit donc de lui trouver un joli nom et de le créer avec cette commande :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ adduser &amp;lt;votreUser&amp;gt;&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;L’utilisateur fraîchement créé a besoin des privilèges Super Utilisateur plus tard, pour cela :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ usermod -aG sudo &amp;lt;votreUser&amp;gt;&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;On peut maintenant se logger avec :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ su - &amp;lt;votreUser&amp;gt;&lt;/code&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;installation-de-ghost&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#installation-de-ghost&quot; aria-label=&quot;installation de ghost permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Installation de Ghost&lt;/h1&gt;
+&lt;p&gt;Ghost fournit un outil pour l’administration serveur de son moteur de blog. Il permet d’installer, de mettre à jour, de supprimer, ou même de démarrer son blog et de lister les blogs si vous en avez plusieurs.
+La commande pour récupérer cet outil :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo npm i -g ghost-cli&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Maintenant que &lt;code class=&quot;language-text&quot;&gt;ghost-cli&lt;/code&gt; est disponible, il faut choisir le dossier d’installation, en être le propriétaire (avec le nouvel utilisateur), et s’y rendre.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo mkdir -p /var/www/ghost&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo chown [votreUser]:[votreUser] /var/www/ghost&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ cd /var/www/ghost&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Et c’est ici que cela se complique (pas beaucoup je vous rassure).
+Ghost est fait pour fonctionner avec une base de données MySQL. Il faut donc, pour utiliser une base de données Sqlite, ajouter le paramètre &lt;strong&gt;local&lt;/strong&gt; à la commande d’install.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ ghost install local&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cela va installer le blog dans le dossier courant. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Il est fort probable que vous ayez une erreur sqlite client. Pour cela, il faut désinstaller &lt;code class=&quot;language-text&quot;&gt;ghost-cli&lt;/code&gt; et le reinstaller… Et si vous avez l’erreur npm qui va avec, voici donc la commande miracle, trouvée sur leur Github.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo npm un -g ghost-cli &amp;amp;&amp;amp; sudo npm i --unsafe-perm -g ghost-cli&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Vous pouvez ensuite relancer la commande d’install si besoin, tout devrait fonctionner.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Quelques commandes utiles :&lt;/em&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Démarrer le blog : &lt;code class=&quot;language-text&quot;&gt;$ ghost start&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;Lister les blogs : &lt;code class=&quot;language-text&quot;&gt;$ ghost ls&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;Arrêter le blog : &lt;code class=&quot;language-text&quot;&gt;$ ghost stop&lt;/code&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;apache---vhost&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#apache---vhost&quot; aria-label=&quot;apache   vhost permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Apache - VHost&lt;/h1&gt;
+&lt;p&gt;Une fois l’installation effectuée, il faut s’occuper de la partie Apache.
+Pour cela, rien de plus simple, il suffit d’ajouter un VHost dans le dossier &lt;strong&gt;sites-available&lt;/strong&gt; d’Apache.
+&lt;code class=&quot;language-text&quot;&gt;$ sudo vim /etc/apache2/sites-available/ghostblog.conf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Voici un exemple de configuration à ajouter dans le fichier de conf.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;VirtualHost *:80&amp;gt;
+    #Domain Name
+    ServerName votredomaine.fr
+    ServerAlias www.votredomaine.fr
+
+    #HTTP proxy/gateway server
+    ProxyRequests off 
+    ProxyPass / http://127.0.0.1:2368/ 
+    ProxyPassReverse / http:/127.0.0.1:2368/     
+&amp;lt;/VirtualHost&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Activez ensuite les modules &lt;code class=&quot;language-text&quot;&gt;proxy&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;proxy_http&lt;/code&gt;.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo a2enmod proxy proxy_http&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Activez maintenant le site.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo a2ensite ghostblog&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Il ne reste plus qu’à redémarrer Apache et Ghost.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo systemctl restart apache2&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo systemctl restart ghost&lt;/code&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;custom-domain&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#custom-domain&quot; aria-label=&quot;custom domain permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Custom domain&lt;/h1&gt;
+&lt;p&gt;Pour utiliser votre propre domaine, une configuration est nécessaire au niveau de votre fournisseur de domaine.
+Si vous êtes chez OVH, il faut vous rendre sur votre espace client, aller dans l’administration de votre domaine et cliquer sur l’onglet &lt;strong&gt;Zone DNS&lt;/strong&gt;.
+Ici, cliquez sur &lt;strong&gt;Ajouter une entrée&lt;/strong&gt; et choisissez le champ DNS de type A.
+Rentrez l’adresse IP de votre serveur dans le champ &lt;strong&gt;Cible&lt;/strong&gt; et validez.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 596px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/febd3edf70df62ea6bb56d2c820fe867/b1503/dns1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQAF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAd1IYk//xAAYEAACAwAAAAAAAAAAAAAAAAAAERAhMf/aAAgBAQABBQKbMGz/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAaEAEBAQADAQAAAAAAAAAAAAABABExQVFx/9oACAEBAAE/IcgsPJ+LeyQeCX//2gAMAwEAAgADAAAAEDDf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EGx//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8QR//EABsQAQEBAAIDAAAAAAAAAAAAAAERACFBgdHh/9oACAEBAAE/EGbWHj1gDnnW+MEvTTkKVkYx73//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/febd3edf70df62ea6bb56d2c820fe867/8ac56/dns1.webp 240w,
+/static/febd3edf70df62ea6bb56d2c820fe867/d3be9/dns1.webp 480w,
+/static/febd3edf70df62ea6bb56d2c820fe867/3cb93/dns1.webp 596w&quot;
+          sizes=&quot;(max-width: 596px) 100vw, 596px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/febd3edf70df62ea6bb56d2c820fe867/09b79/dns1.jpg 240w,
+/static/febd3edf70df62ea6bb56d2c820fe867/7cc5e/dns1.jpg 480w,
+/static/febd3edf70df62ea6bb56d2c820fe867/b1503/dns1.jpg 596w&quot;
+          sizes=&quot;(max-width: 596px) 100vw, 596px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/febd3edf70df62ea6bb56d2c820fe867/b1503/dns1.jpg&quot;
+          alt=&quot;dns1&quot;
+          title=&quot;dns1&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;La mise à jour des DNS n’est pas instantanée. Attendez quelques heures pour que votre nom de domaine pointe bien vers votre serveur.&lt;/p&gt;
+&lt;h1 id=&quot;ssl&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ssl&quot; aria-label=&quot;ssl permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SSL&lt;/h1&gt;
+&lt;p&gt;Pour finir, voici comment mettre en place un certificat TLS/SSL sur le serveur Apache en quelques minutes.&lt;/p&gt;
+&lt;p&gt;Pour cela, nous allons utiliser l’outil &lt;code class=&quot;language-text&quot;&gt;cerbot&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;L’installation se fait à travers cette commande :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install python-certbot-apache&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ensuite, exécutez la commande&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo certbot --apache&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Certbot&lt;/strong&gt; récupère un certificat et met à jour la configuration des Vhost d’Apache qu’il trouve.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 642px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/73c6d4de1e43ebccf062542b65d3d438/46b1b/SSL1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAcOAqD//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAEFAn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAWEAEBAQAAAAAAAAAAAAAAAAAAEYH/2gAIAQEAAT8h1Ef/2gAMAwEAAgADAAAAEAPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAFxABAQEBAAAAAAAAAAAAAAAAAREAMf/aAAgBAQABPxBFejN2vNG//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/73c6d4de1e43ebccf062542b65d3d438/8ac56/SSL1.webp 240w,
+/static/73c6d4de1e43ebccf062542b65d3d438/d3be9/SSL1.webp 480w,
+/static/73c6d4de1e43ebccf062542b65d3d438/7eb86/SSL1.webp 642w&quot;
+          sizes=&quot;(max-width: 642px) 100vw, 642px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/73c6d4de1e43ebccf062542b65d3d438/09b79/SSL1.jpg 240w,
+/static/73c6d4de1e43ebccf062542b65d3d438/7cc5e/SSL1.jpg 480w,
+/static/73c6d4de1e43ebccf062542b65d3d438/46b1b/SSL1.jpg 642w&quot;
+          sizes=&quot;(max-width: 642px) 100vw, 642px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/73c6d4de1e43ebccf062542b65d3d438/46b1b/SSL1.jpg&quot;
+          alt=&quot;SSL1&quot;
+          title=&quot;SSL1&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sélectionnez donc vos domaines et appuyez sur entrer.&lt;/p&gt;
+&lt;p&gt;Les certificats proposés par Certbot (Let’s Encrypt) ne sont valables que 90 jours, il faut donc les renouveler. Pour cela, on peut utiliser la commande &lt;code class=&quot;language-text&quot;&gt;certbot renew&lt;/code&gt; et créer une tâche récurrente qui exécutera cette commande.
+Lancez la commande :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ sudo crontab -e&lt;/code&gt;&lt;br&gt;
+Et ajoutez cette ligne :&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;0 4 * * 7 certbot renew&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Les certificats seront ainsi mis à jour chaque semaine, le dimanche à 4h du matin.&lt;/p&gt;
+&lt;p&gt;Voilà, votre blog est maintenant configuré sur votre serveur. N’hésitez pas à venir me parler sur Twitter si vous avez des questions ou suggestions. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Disponibilité d'un iPhone X en AS]]></title><description><![CDATA[L'iPhone X est sorti le 3 novembre, et pourtant, encore aujourd'hui, il est en rupture partout. Néanmoins, certain Apple Store reçoivent quotidiennement du stock. Il faut donc être très rapide pour arriver à en commander un.]]></description><link>https://enishowk.github.io//posts/dispo-un-iphone-x-en-as</link><guid isPermaLink="false">https://enishowk.github.io//posts/dispo-un-iphone-x-en-as</guid><pubDate>Mon, 13 Nov 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Plutôt que de guetter le site toute la journée, on peut simplement faire tourner un script qui fera l’appel à notre place. &lt;/p&gt;
+&lt;p&gt;Voici un exemple de function :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apple&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;https://www.apple.com/fr/shop/retail/pickup-message?pl=true&amp;amp;parts.0=MQAD2ZD/A&amp;amp;location=75000&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stores&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;store&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;partsAvailability&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;MQAD2ZD/A&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;storeSelectionEnabled&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token comment&quot;&gt;// Envoie de mail, notif, bot&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Il suffit juste de remplacer le code postal par le vôtre, ainsi que le modèle de l’iPhone voulu (dans l’URL et le code) par un de ceux-ci :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Noir 64Go : &lt;strong&gt;MQAC2ZD/A&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Noir 128Go : &lt;strong&gt;MQAF2ZD/A&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Blanc 64Go : &lt;strong&gt;MQAD2ZD/A&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Blanc 128Go : &lt;strong&gt;MQAG2ZD/A&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cette fonction peut être utilisée via un Bot sous Discord, qui l’éxécute toutes les 5 secondes par exemple. Dès lors que le site affiche des dispos, vous serez notifié en MP directement.&lt;/p&gt;
+&lt;p&gt;À vous de l’adapter selon votre cas.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[systemctl start enish.service]]></title><description><![CDATA[Cela fait plusieurs années que l'idée d'ouvrir un blog me trotte dans la tête. Puis les semaines passent, l'envie aussi, et les autres projets à développer s'accumulent.]]></description><link>https://enishowk.github.io//posts/a-brief-history-of-typography</link><guid isPermaLink="false">https://enishowk.github.io//posts/a-brief-history-of-typography</guid><pubDate>Sun, 12 Nov 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Cela fait plusieurs années que l’idée d’ouvrir un blog me trotte dans la tête. Puis les semaines passent, l’envie aussi, et les autres projets à développer s’accumulent.&lt;/p&gt;
+&lt;p&gt;Je me dis également qu’il en existe déjà bien assez. Et qu’un petit développeur comme moi n’a rien d’intéressant à raconter. Et c’est bien par là que l’aventure commence. Parce que ce blog va surtout me servir de notes. Étant donné que j’ai très souvent une mémoire à court terme et qu’il m’arrive de rechercher plusieurs fois par mois la même solution à un problème, ce blog me sera bien utile.&lt;/p&gt;
+&lt;p&gt;Cependant, vous y trouverez aussi des tutos, des problèmes de code, de la veille techno, des tests high-tech et autres conneries. &lt;/p&gt;
+&lt;p&gt;Le but étant de faire une synthèse de temps en temps de ma veille techno. Concept totalement piqué, entre autres, à &lt;a href=&quot;https://twitter.com/MindsersIT&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Nathanaël&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Si vous avez une remarque, je suis dispo sur &lt;a href=&quot;https://twitter.com/Enish__&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content:encoded></item></channel></rss>
